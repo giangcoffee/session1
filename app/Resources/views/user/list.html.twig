@@ -1,0 +1,8 @@
+<ul>
+{% for id, user in users %}
+    <a href="{{ path('user_detail_page', {"id": id}) }}">
+        <li>{{ user['name'] }}</li>
+    </a>
+    <span>{{ user['email'] }}</span>
+{% endfor %}
+</ul>

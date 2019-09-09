@@ -1,0 +1,8 @@
+<ul>
+{% for id, task in tasks %}
+    <a href="{{ path('task_detail_page', {"id": id}) }}">
+        <li>{{ task['task'] }}</li>
+    </a>
+    <span>{{ task['dueDate'] | date('Y-m-d') }}</span>
+{% endfor %}
+</ul>
